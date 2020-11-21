@@ -1,0 +1,2 @@
+# Smoke Detection
+This is a project which i made in my Internet Of Things class. This project is made using android studio, arduino ide, firebase and some hardware requirements like nodemcu arduino. The arduino updates the data on the firebase realtime database. Then the android app fetches the data from the firebase and displays the value on firebase. Then it make an alert when the value is more than the required on. After that if the smoke is detected, then there is a option for the person to call the emergency number, ambulance or firebrigade. 

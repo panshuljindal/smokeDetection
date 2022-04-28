@@ -53,12 +53,11 @@ public class Landing_page extends AppCompatActivity {
         myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.i("Value","hello");
                 String ph = dataSnapshot.child("Value").getValue().toString();
+                String data = dataSnapshot.child("Sensor").getValue().toString();
                 Integer smokeValue= Integer.parseInt(ph);
                 value.setText(smokeValue.toString());
-                if(smokeValue>1000){
-                    //alertdialogue();
+                if(smokeValue>Integer.valueOf(data)){
                     smokedetect();
                 }
                 else {
